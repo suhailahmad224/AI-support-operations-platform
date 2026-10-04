@@ -1,0 +1,35 @@
+{
+  "name": "ai-support-platform-backend",
+  "version": "1.0.0",
+  "description": "Enterprise Backend for AI Support & Operations Platform",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node test-security-hardening.js && node test-analytics-csat.js && node test-knowledge-rag.js && node test-ai-intelligence.js && node test-messaging-notifications.js && node test-ticket-system.js && node test-user-management.js && node test-auth-rbac.js",
+    "test:security": "node test-security-hardening.js",
+    "test:analytics": "node test-analytics-csat.js",
+    "test:knowledge": "node test-knowledge-rag.js",
+    "test:ai": "node test-ai-intelligence.js",
+    "test:messaging": "node test-messaging-notifications.js",
+    "test:tickets": "node test-ticket-system.js",
+    "test:users": "node test-user-management.js",
+    "test:auth": "node test-auth-rbac.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.1.3",
+    "nodemon": "^3.1.9"
+  }
+}

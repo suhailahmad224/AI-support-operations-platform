@@ -1,0 +1,14 @@
+{
+  "name": "ai-support-platform-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Support & Operations Platform - Monorepo root",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "build": "npm run build:frontend",
+    "test": "node backend/test-security-hardening.js && node backend/test-analytics-csat.js && node backend/test-knowledge-rag.js && node backend/test-ai-intelligence.js && node backend/test-messaging-notifications.js && node backend/test-ticket-system.js && node backend/test-user-management.js && node backend/test-auth-rbac.js"
+  }
+}
